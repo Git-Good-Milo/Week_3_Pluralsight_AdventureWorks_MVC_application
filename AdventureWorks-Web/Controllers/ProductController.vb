@@ -1,7 +1,17 @@
-Public Class HomeController
-    Inherits System.Web.Mvc.Controller
+Imports AdventureWorks.ViewModelLayer
 
-    Function Index() As ActionResult
-        Return View()
-    End Function
+Namespace Controllers
+    Public Class ProductsController
+        Inherits Controller
 
+        ' GET products
+
+        Function ProductList() As ActionResult
+            Dim vm As New ProductViewModel1
+
+            vm.LoadProducts(Server.MapPath("/"))
+
+            Return View(vm)
+        End Function
+    End Class
+End Namespace

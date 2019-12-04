@@ -29,7 +29,7 @@ End Code
                  <td>@product.StandardCost</td>
                  <td>@product.ListPrice</td>
              </tr>
-    </tbody>
+        </tbody>
 
     Next
 </table>
